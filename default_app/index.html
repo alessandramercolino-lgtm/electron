@@ -90,3 +90,44 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Bottone Magico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f0f0;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: steelblue;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ciao! 👋</h1>
+  <p>Clicca il bottone per cambiare colore:</p>
+  <button id="magicButton">Cliccami</button>
+
+  <script>
+    const button = document.getElementById("magicButton");
+
+    button.addEventListener("click", () => {
+      const colors = ["red", "green", "blue", "purple", "orange", "pink"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      button.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
